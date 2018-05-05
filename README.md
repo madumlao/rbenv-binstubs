@@ -5,8 +5,6 @@ aware of project-specific binstubs created by [bundler](http://gembundler.com/).
 
 This means you don't have to type `bundle exec ${command}` ever again!
 
-[![Build Status of master](https://api.travis-ci.org/ianheggie/rbenv-binstubs.svg?branch=master)](https://travis-ci.org/ianheggie/rbenv-binstubs)
-
 ## Installation
 
 To install rbenv-binstubs, clone this repository into your ~/.rbenv/plugins directory. (You'll need a recent version of rbenv that supports plugin bundles.)
@@ -72,8 +70,6 @@ Copyright (c) 2013 Ian Heggie - Released under the same terms as [rbenv's MIT-Li
 [rbenv-bundler](https://github.com/carsomyr/rbenv-bundler) is another rbenv plugin for bundler - it makes shims aware of bundle installation paths. It uses a more involved approach which has performance and other consequences.
 
 ## Note on Patches/Pull Requests
-
-*Since I no longer using rbenv, I am happy to include pull requests, but I am not actively developing this plugin. If you are interested in taking on this project, either completely or in partnership, please contact me.*
 
 * Fork the project.
 * Make your feature addition or bug fix, **with tests**
