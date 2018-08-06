@@ -79,7 +79,7 @@ register_binstubs()
       fi
       if [ -d "$potential_path" ]; then
         for shim in "$potential_path"/*; do
-          if [ -x "$shim" ]; then
+          if [ ! -d "$shim" ] && [ -x "$shim" ] && head -n1 "$shim" | grep -q '^#.*ruby'; then
             register_shim "${shim##*/}"
           fi
         done

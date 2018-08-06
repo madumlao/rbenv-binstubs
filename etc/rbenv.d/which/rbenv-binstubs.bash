@@ -81,7 +81,7 @@ check_for_binstubs()
 	  esac
 	done < "$root/.bundle/config"
       fi
-      if [ -x "$potential_path" ]; then
+      if [ ! -d "$potential_path" ] && [ -x "$potential_path" ] && head -n1 "$potential_path" | grep -q '^#.*ruby'; then
 	RBENV_COMMAND_PATH="$potential_path"
       fi
       break
