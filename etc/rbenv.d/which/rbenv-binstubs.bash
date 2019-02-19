@@ -88,6 +88,12 @@ check_for_binstubs()
     fi
     root="${root%/*}"
   done
+
+  # if shim / local version doesnt exist, default to system path
+  if ! [ -x "$RBENV_COMMAND_PATH" ]; then
+    PATH="$(remove_from_path "${RBENV_ROOT}/shims")"
+    RBENV_COMMAND_PATH="$(command -v "$RBENV_COMMAND" || true)"
+  fi
 }
 
 if [ -z "$DISABLE_BINSTUBS" ]; then
